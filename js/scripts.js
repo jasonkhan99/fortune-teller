@@ -8,13 +8,19 @@ $(document).ready(function(){
       const fortuneAnswers = $(this).val();
       arrayAnswers.push(fortuneAnswers);
       // $('#responses').append(fortuneAnswers + "<br>");
-      console.log(arrayAnswers);
     });
+    console.log(arrayAnswers);
 
-   
+    arrayAnswers.forEach(function(answer) {
+      if (answer === 'cat' || 'mirror') {
+        $('#responses').append('Watch yourself for the next few days. Use Sage once in the morning and then again in the afternoon')
+      } else if (answer === 'luck') {
+        $('#responses').append('It is your lucky day. Buy a lottery ticket.')
+      } else
+        alert("something else");
 
-
-
+    });
+    
 
 
 
